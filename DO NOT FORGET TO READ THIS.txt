@@ -1,0 +1,39 @@
+1) Name your Source Code file i.e. .py file to porter-stemmer_[lastName]-[firstName].py
+    I.e.: "porter-stemmer_[lastName]-[firstName].py"
+        where [lastName] is student's lastName in lowerCase.
+        where [firstName] is student's firstName in lowerCase.
+    Example: "porter-stemmer_tilaon-antonin.py"
+
+2) Name your output file stemmed_prompts.csv
+    I.e.: "stemmed-dataset_15k-rows_[lastName]-[firstName].csv"
+        where [lastName] is student's lastName in lowerCase.
+        where [firstName] is student's firstName in lowerCase.
+    Example: "stemmed-dataset_15k-rows_tilaon-antonin.csv"
+
+3) Use 4-cols_15k-rows.csv""as input dataset, your outputFile(.csv) from this dataset
+    will be used to check how similar it is to the output of an open-source Porter's stemmer's result
+
+4) Put your Source code and CSV file into a Folder. Name your folder
+    I.e.: lab-program-1_[lastname]-[firstname]
+    Example:    
+                +---lab-program-1_tilaon-antonin
+                |       porter-stemmer_tilaon-antonin.py
+                |       stemmed-dataset_15k-rows_tilaon-antonin.csv
+
+5) IMPORTANT TO **READ THE RUBRIC**
+
+6) Submit your Folder thru Google Classroom, in the Assignments tab.
+
+
+
+# HOW TO OUTPUT .csv FILE
+# WRITE THE STEMMED DATA TO THE OUTPUT .csv file
+        processed_df.to_csv(output_file_path, index=False, encoding='utf8')
+        print(f"Stemmed data has been written to {output_file_path}")
+    except FileNotFoundError:
+        print(f"File not found: {input_file_path}")
+        sys.exit(1)
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        sys.exit(1)
+
